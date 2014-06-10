@@ -364,6 +364,12 @@ class MultiValueField(SearchField):
 class SuggestionField(SearchField):
     field_type = 'textSpell'
 
+    def __init__(self, **kwargs):
+        super(SuggestionField, self).__init__(**kwargs)
+        self.is_multivalued = True
+        self.stored = False
+        self.indexed = True
+
 
 class FacetField(SearchField):
     """
