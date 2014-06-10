@@ -361,6 +361,10 @@ class MultiValueField(SearchField):
         return list(value)
 
 
+class SuggestionField(SearchField):
+    field_type = 'textSpell'
+
+
 class FacetField(SearchField):
     """
     ``FacetField`` is slightly different than the other fields because it can

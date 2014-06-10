@@ -71,7 +71,7 @@ Something like the following is suggested::
     class MySearchIndex(indexes.SearchIndex, indexes.Indexable):
         text = indexes.CharField(document=True, use_template=True)
         # ... normal fields then...
-        suggestions = indexes.FacetCharField()
+        suggestions = indexes.SuggestionField()
 
         def prepare(self, obj):
             prepared_data = super(MySearchIndex, self).prepare(obj)
