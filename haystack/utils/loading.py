@@ -2,10 +2,10 @@ from __future__ import unicode_literals
 import copy
 import inspect
 import warnings
+import importlib
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 from collections import OrderedDict
-from django.utils import importlib
 from django.utils.module_loading import module_has_submodule
 from haystack.constants import Indexable, DEFAULT_ALIAS
 from haystack.exceptions import NotHandled, SearchFieldError
